@@ -1,0 +1,72 @@
+﻿
+/*Global Styling*/
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Comic Sans MS';
+}
+
+body {
+    
+}
+
+li a {
+    text-decoration: none; /*Removing Underlines*/
+}
+
+/*Sidebar Iteself*/
+.sidebar {
+    top:0;
+    position: fixed;
+    left: 0px;
+    width: 280px;
+    height: 100%;
+    background: black;
+    transition: all .5s ease;
+}
+
+/*Header*/
+    .sidebar header {
+        font-size: 4rem;
+        color: white;
+        line-height: 70px;
+        text-align: center;
+        background: black;
+        user-select: none;
+    }
+
+
+    /*Contents of Sidebar*/
+    .sidebar ul a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: 65px;
+        font-size: 1.8rem;
+        color: darkgray;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-bottom: 1px solid black;
+        border-top: 1px solid rgba(255,255,255,.1);
+        transition: .4s;
+    }
+
+/*Hover Effect*/
+ul li:hover a {
+    font-size:2rem;
+    color: white;
+   
+}
+
+.sidebar ul a i {
+    margin-right: 20px;
+}
+
+section {
+    background: url(bg.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+}

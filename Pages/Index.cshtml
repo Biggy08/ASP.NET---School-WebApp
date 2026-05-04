@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = null;
+}
+
+<head> 
+    <link rel="stylesheet" href="~/css/Login.css"/>
+</head>
+
+@*HTML :*@
+
+<div class="center">
+    <h1 >Login</h1>
+
+    @* method = "post"   telling ASP.NET core to send data to the server*@
+    @*post automatically targets method OnPostAsync() in the backend *@
+    <form class="center_form" method="post"> @* VVI *@
+        <label><h2>UserName</h2>
+
+            <input 
+                class="input_field"
+                type="text" 
+                name="Name" />  @*Must match the backend property names*@
+        </label>
+        <br>
+        <label><h2>Password</h2>
+            <input
+                class="input_field"
+                type="password"
+                name="Password" /> @*Must match backend*@
+        
+        </label>
+        <br><br>
+        <input 
+            class="login_button"
+            type="submit"
+            name="Submit"
+            value="Login"/> 
+            @*Click Submit ->  Post request sent to backend*@
+        
+
+        </form>
+    
+</div>

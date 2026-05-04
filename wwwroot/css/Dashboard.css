@@ -1,0 +1,92 @@
+﻿.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    width: 200px;
+    height: 120px;
+}
+
+.cards{
+    display:flex;
+    gap: 30px;
+}
+
+.charts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+
+    margin-left: -20px;
+    margin-bottom: 2rem;
+}
+
+
+.class1 {
+
+    margin-left:5rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.container{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;  /* snap to another section*/
+    
+}
+
+section{
+    height: 100vh;  /*each section taking up full screen*/
+    scroll-snap-align: start;
+
+    padding-top:1rem;
+    margin-left: 1rem;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+form {
+    gap: 1rem;
+    padding: 1vh;
+}
+
+.form-group {
+    padding: 1rem;
+    width: 30rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-weight: 600;
+        color: #111;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #111;
+        box-sizing: border-box;
+    }
