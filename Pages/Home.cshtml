@@ -21,7 +21,24 @@
 				<p>Total Students</p>
 				<h2>@Model.StudentCount</h2>
 			</div>
+
+			<div class="stat-card">
+				<p>Total Faculty</p>
+				<h2>@Model.FacultyCount</h2>
+			</div>
+
+			<div class="stat-card">
+				<p>Total Staff</p>
+				<h2>@Model.StudentCount</h2>
+			</div>
 		</div>
+
+		<h1>Notice Should be here</h1>
+		
+		@foreach (var notice in Model.NoticeMsg)
+			{
+				<p>@notice.Message</p>
+			}
 
 	</div>
 </body>

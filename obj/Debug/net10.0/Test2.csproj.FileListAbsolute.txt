@@ -382,7 +382,6 @@ F:\01project\Internship\Test2\obj\Debug\net10.0\scopedcss\Pages\Shared\_Layout.c
 F:\01project\Internship\Test2\obj\Debug\net10.0\scopedcss\bundle\Test2.styles.css
 F:\01project\Internship\Test2\obj\Debug\net10.0\scopedcss\projectbundle\Test2.bundle.scp.css
 F:\01project\Internship\Test2\obj\Debug\net10.0\compressed\7yy1n7tx5s-{0}-gqj9tvii1y-gqj9tvii1y.gz
-F:\01project\Internship\Test2\obj\Debug\net10.0\compressed\2nqsevnx8a-{0}-l7wl7vmgpg-l7wl7vmgpg.gz
 F:\01project\Internship\Test2\obj\Debug\net10.0\compressed\dchmv0duh3-{0}-b9sayid5wm-b9sayid5wm.gz
 F:\01project\Internship\Test2\obj\Debug\net10.0\compressed\bvakq3290y-{0}-61n19gt1b8-61n19gt1b8.gz
 F:\01project\Internship\Test2\obj\Debug\net10.0\compressed\30po8shtx3-{0}-yyhqyjxabz-yyhqyjxabz.gz
@@ -461,4 +460,6 @@ F:\01project\Internship\Test2\obj\Debug\net10.0\Test2.pdb
 F:\01project\Internship\Test2\obj\Debug\net10.0\Test2.genruntimeconfig.cache
 F:\01project\Internship\Test2\obj\Debug\net10.0\ref\Test2.dll
 F:\01project\Internship\Test2\obj\Debug\net10.0\compressed\gk46uk24bc-{0}-xps8uu4mk0-xps8uu4mk0.gz
-F:\01project\Internship\Test2\obj\Debug\net10.0\compressed\8ybp48va19-{0}-0goq7o1ryd-0goq7o1ryd.gz
+F:\01project\Internship\Test2\obj\Debug\net10.0\Test2.sourcelink.json
+F:\01project\Internship\Test2\obj\Debug\net10.0\compressed\kc1ysiyo57-{0}-0goq7o1ryd-0goq7o1ryd.gz
+F:\01project\Internship\Test2\obj\Debug\net10.0\compressed\2nqsevnx8a-{0}-q0ps9umfog-q0ps9umfog.gz

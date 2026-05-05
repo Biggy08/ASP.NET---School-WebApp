@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/01project/Internship/Test2/Pages/FacultyData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjdWx0eURhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/01project/Internship/Test2/Pages/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/01project/Internship/Test2/Pages/Info.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/01project/Internship/Test2/Pages/Notice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/01project/Internship/Test2/Pages/Shared/Simple.cshtml]

@@ -23,10 +23,13 @@ namespace Test2.Pages
         // GET: load existing student data into form
         public async Task<IActionResult> OnGetAsync(int id)
         {
+            //1. find the student  by id  
+            //details fo student loaded through context to the form
             Student = await _context.Students.FindAsync(id) ?? new Student();
+            //2. if not found, return 404
+            if (Student == null) return NotFound(); //exit if null
 
-            if (Student == null) return NotFound();
-
+            //3. Load courses for dropdown
             Courses = new SelectList(_context.Courses, "Id", "Title");
 
             return Page();

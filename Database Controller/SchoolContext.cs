@@ -9,6 +9,10 @@ namespace Test2.Database_Controller
         public DbSet<Student> Students { get; set; } //representing Student table in database
         public DbSet<User> Users { get; set; } //User (Entity) -> Uesrs (DbSet) table   
 
+        public DbSet<Faculty> Faculty { get; set; }
+
+        public DbSet<Notice> Notices { get; set; }  
+
         public DbSet<Course> Courses { get; set; } //Course (Entity) -> Courses (DbSet) table
         //Student : C# model (entity)
         //Stduents : DbSet property name   
