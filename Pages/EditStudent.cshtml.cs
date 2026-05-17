@@ -10,10 +10,13 @@ namespace Test2.Pages
     public class EditStudentModel : PageModel
     {
 
-        // Dependency Injection 
+        //Dependency Injection
         private readonly SchoolContext _context;
+        public EditStudentModel (SchoolContext context)
+        {
+            _context = context;
+        }
 
-        public EditStudentModel(SchoolContext context) => _context = context;
 
         [BindProperty]
         public Student Student { get; set; } = new Student();

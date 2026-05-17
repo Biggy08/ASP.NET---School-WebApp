@@ -3,42 +3,122 @@
 @{
 }
 
-
 <head>
 	<link rel="stylesheet" href="https://cloudflare.com">
 	<link rel="stylesheet" href="~/css/simple.css">
 	<link rel="stylesheet" href="~/css/Dashboard.css"/>
-	
+	<link rel="stylesheet" href="~/css/Section.css" />	
+    <link rel="stylesheet" href="~/css/AdminGallery.css"/>
 </head>
 
 <body>
-	<div class="container" style="margin-left: 10rem;">
-		<h1 class="title">Home</h1>
+@* Page Wrapper = Mother Div  (must contain all sections)*@
+<div class="page-wrapper">
+        @*========================================================================================================*@
+        <section>
+			<div class="container" style="margin-left: 10rem;">
+				<h1 class="title">Home</h1>
 
-	
-		<div class="cards">
-			<div class="stat-card">
-				<p>Total Students</p>
-				<h2>@Model.StudentCount</h2>
-			</div>
+                <div class="cards">
+				<a href="/StudentData">
+                        <div class="stat-card">
+                            <p>Total Students</p>
+                            <h2>@Model.StudentCount</h2>
+                        </div>
+                </a>
+                <a href="/FacultyData">
+                        <div class="stat-card">
+                            <p>Total Faculty</p>
+                            <h2>@Model.FacultyCount</h2>
+                        </div>
+                </a>
 
-			<div class="stat-card">
-				<p>Total Faculty</p>
-				<h2>@Model.FacultyCount</h2>
-			</div>
+                <a href="/StudentData">
+                        <div class="stat-card">
+                            <p>Total Students</p>
+                            <h2>@Model.StudentCount</h2>
+                        </div>
+                </a>
+                </div>
 
-			<div class="stat-card">
-				<p>Total Staff</p>
-				<h2>@Model.StudentCount</h2>
-			</div>
-		</div>
-
-		<h1>Notice Should be here</h1>
+                @*----------------------------------------------------*@
+                <div class="notice">
+                    <h1>Notice </h1>
 		
-		@foreach (var notice in Model.NoticeMsg)
-			{
-				<p>@notice.Message</p>
-			}
+                    @foreach (var notice in Model.NoticeMsg)
+                    {
+                        <p>@notice.Message</p>
+                    }
+                </div>
+                @*----------------------------------------------------*@
 
-	</div>
+			</div>
+    </section>
+    @*========================================================================================================*@  
+    @*Admin Gallery Section (underconstruction)*@
+    <section style="margin-left:10rem">
+            <h2>Manage Photos</h2>
+
+            <div class="admin-grid">
+
+                <div  onclick="document.getElementById('upload-hero').click()">
+                    <img id="preview-hero" src="~/images/hero.jpg" alt="Hero"   height="200" width="300"/>
+                    <input type="file" id="upload-hero" accept="image/*"
+                           data-target="preview-hero"
+                           data-filename="hero.jpg"
+                           style="display:none" />
+                </div>
+
+                <div  onclick="document.getElementById('upload-intro').click()">
+                    <img id="preview-intro" src="~/images/intro.jpg" alt="Intro"  height="200" width="300" />
+                    <input type="file" id="upload-intro" accept="image/*"
+                           data-target="preview-intro"
+                           data-filename="intro.jpg"
+                           style="display:none" />
+                </div>
+
+                <div  onclick="document.getElementById('upload-img1').click()">
+                    <img id="preview-img1" src="~/images/img1.jpg" alt="Image 1"   height="200" width="300" />
+                    <input type="file" id="upload-img1" accept="image/*"
+                           data-target="preview-img1"
+                           data-filename="img1.jpg"
+                           style="display:none" />
+                </div>
+
+                <div  onclick="document.getElementById('upload-img2').click()">
+                    <img id="preview-img2" src="~/images/img2.jpg" alt="Image 2"  height="200" width="300" />
+                    <input type="file" id="upload-img2" accept="image/*"
+                           data-target="preview-img2"
+                           data-filename="img2.jpg"
+                           style="display:none" />
+                </div>
+
+                <div  onclick="document.getElementById('upload-img3').click()">
+                    <img id="preview-img3" src="~/images/img3.jpg" alt="Image 3"  height="200" width="300" />
+                    <input type="file" id="upload-img3" accept="image/*"
+                           data-target="preview-img3"
+                           data-filename="img3.jpg"
+                           style="display:none" />
+                </div>
+
+                <div  onclick="document.getElementById('upload-img4').click()">
+                    <img id="preview-img4" src="~/images/img4.jpg" alt="Image 4"  height="200" width="300" />
+                    <input type="file" id="upload-img4" accept="image/*"
+                           data-target="preview-img4"
+                           data-filename="img4.jpg"
+                           style="display:none" />
+                </div>
+
+            </div>
+        </section>
+
+</div>  @*Mother Div closing*@
 </body>
+
+
+@*Preventing CSRF attacks*@
+@Html.AntiForgeryToken()
+@section Scripts {
+    <script src="~/js/AdminGallery.js"></script>
+}
+@*Each Reuqest must contain TOKEN for validation*@

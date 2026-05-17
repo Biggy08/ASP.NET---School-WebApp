@@ -1,0 +1,29 @@
+﻿@page
+@model Test2.Pages.Viewers.FamilyModel
+@{
+	Layout = "_ViewerLayout";
+}
+
+<head>
+	<link rel="stylesheet" href="~/css/Dashboard.css" />
+	<link rel="stylesheet" href="~/css/Section.css" />
+</head>
+
+<body>
+<div class="page-wrapper">
+	@*==============================================*@
+	<section>
+		<div class="cards">
+
+			<div class="stat-card">
+				<h2>@Model.StudentCount</h2>
+				<h2>Students</h2>
+
+			</div>
+
+		</div>
+
+	</section>
+		@*==============================================*@
+</div>
+</body>

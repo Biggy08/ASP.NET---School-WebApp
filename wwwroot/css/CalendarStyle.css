@@ -1,0 +1,22 @@
+﻿
+/*Calendar Div*/
+#calendar {
+    height: 85vh;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px 12rem auto;
+    padding: 0 16px;
+}
+
+/*For numbers inside the calendar*/
+.fc .fc-daygrid-day-number {
+    color: black;
+    text-decoration: none;
+}
+
+/* Day-of-week header (Mon, Tue, Wed...) */
+.fc .fc-col-header-cell-cushion {
+    color: #555555;
+    text-decoration: none; /* removes default underline */
+}
+

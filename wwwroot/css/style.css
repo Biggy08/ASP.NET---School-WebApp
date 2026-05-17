@@ -52,9 +52,10 @@ li a {
         transition: .4s;
     }
 
+
 /*Hover Effect*/
 ul li:hover a {
-    font-size:2rem;
+    font-size:1.9rem;
     color: white;
    
 }
@@ -70,3 +71,5 @@ section {
     height: 100vh;
     transition: all .5s;
 }
+
+

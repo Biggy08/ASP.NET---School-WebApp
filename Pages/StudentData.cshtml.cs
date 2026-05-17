@@ -51,6 +51,7 @@ namespace Test2.Pages
 
 
             //For bargraph 1:
+            // using LINQ
             ComputerCount = _context.Students
              .Count(s => s.Course != null && s.Course.Title == "Computer");
 
@@ -64,6 +65,7 @@ namespace Test2.Pages
             //For Top 5 students based on Score
             // Add this property
 
+            //LINQ
             TopStudents = _context.Students
                 .Include(s=>s.Course)   //Adding course of each student
                 .OrderByDescending(s => s.Score)

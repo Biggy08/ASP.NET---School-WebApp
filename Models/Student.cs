@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.Data.SqlTypes;
 
 //Student Table
@@ -8,8 +9,6 @@ namespace Test2.Models
     //Table Definition for Students in SQL Database
     public class Student
     {
-        //Columns
-        [Key]
         public int Id { get; set; }
         public string? SName { get; set; }
 
@@ -17,6 +16,7 @@ namespace Test2.Models
 
         public string? Contact { get; set; }
 
+        
         public Boolean Result { get; set; }
 
         public int Score { get; set; }

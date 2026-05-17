@@ -10,18 +10,67 @@
 </head>
 
 <body>
-	<div class="container" style="margin-left: 10rem;">
-		<h1 class="title">Faculty</h1>
+<section>
+		<div class="container" style="margin-left: 10rem;">
+			<h1 class="title">Faculty</h1>
+
+			@*-------------------Stat Cards-------------------*@
+			<div class="cards">
 
 	
-		<div class="cards">
-	
+				<div class="stat-card">
+					<p>Total Faculty</p>
+					<h2>@Model.FacultyInfo.Count</h2>
+				</div>
 
-			<div class="stat-card">
-				<p>Total Faculty</p>
-				<h2>@Model.FacultyCount</h2>
+				<div class="stat-card">
+					<p>Total Faculty</p>
+					<h2>@Model.FacultyInfo.Count</h2>
+				</div>
+
+				<div class="stat-card">
+					<p>Total Faculty</p>
+					<h2>@Model.FacultyInfo.Count</h2>
+				</div>
+			</div>
+			@*--------------------------------------*@
+
+		</div>
+</section>
+
+
+<section>
+		<div class="container" style="margin-left: 10rem;">
+			<h1 class="title">Faculty</h1>
+
+			<div class="faculty">
+				@*C# Logic*@
+				@if (Model.FacultyInfo.Any())  @*If faculty list is not empty*@
+				{
+					@foreach (var faculty in Model.FacultyInfo)  @*Creating variabel to store faculty member data in each iteration*@
+					{
+						<div class="faculty-card">
+							<p>@faculty.FName</p>
+							<p>@faculty.Address</p>
+							<p>@faculty.Contact</p>
+
+							
+
+							<form method="post" asp-page-handler="Delete">
+								<input type="hidden" name="id" value="@faculty.Id" />
+								<button type="submit" class="btn btn-danger btn-sm">Delete</button>
+							</form>
+
+						</div>
+					}
+				}
+				else
+				{
+					<p>No faculty members found.</p>
+				}
 			</div>
 		</div>
-
-	</div>
+</section>
+		@*-------------------------------------*@
+	
 </body>

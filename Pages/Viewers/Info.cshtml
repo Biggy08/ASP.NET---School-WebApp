@@ -1,0 +1,28 @@
+﻿@page
+@model Test2.Pages.Viewers.InfoModel
+@{
+	Layout = "_ViewerLayout";
+}
+
+<head>
+    @*Font Awesome Integration*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    @*Other  Styling Files*@
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css//ForViewers.css" />
+</head>
+
+<body>
+	<h1> Info Page</h1>
+    
+        @if (Model.CurrentInfo != null)
+        {
+            <p>@Model.CurrentInfo.Text</p>                
+        }
+        else
+        {
+            <p>No info stored yet.</p>
+		}
+
+</body>

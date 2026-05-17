@@ -2,70 +2,69 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Test2.Database_Controller;
 using System.Security.Claims;
-
-
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
+using Test2.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Test2.Pages
 {
     public class IndexModel : PageModel
     {
-        //1. Model Binding  (Form Data -> C# properties)
-        // Matches name with frontend form and maps it to these properties
         [BindProperty]
         public string? Name { get; set; }
 
         [BindProperty]
-        public string? Password{ get; set; }
+        public string? Password { get; set; }
 
+        // Replace _context injection with Identity managers
+        private readonly SignInManager<User> _signInManager;
+        private readonly UserManager<User> _userManager;
 
-        //2. Dependency Injection 
-        // To get instance of Db Context from Container
-        // Assign it to the private field _context  
-        private readonly SchoolContext _context;//adding DbContext 
-        public IndexModel(SchoolContext context)
+        public IndexModel(SignInManager<User> signInManager, UserManager<User> userManager)
         {
-            _context = context;     
+            _signInManager = signInManager;
+            _userManager = userManager;
         }
-        //constructor of IndexModel taking  context as an input  
-        //to use the context for db operations 
 
-
-        //Form Submission handler
-        //3. Asynchronous Programming (async/await)
-        // runs when post request is  sent from frontend 
         public async Task<IActionResult> OnPostAsync()
         {
-            var user = _context.Users
-                .FirstOrDefault(u => u.Name == Name && u.Password == Password);
-
-            //Wrong Credentials , stay on the same page
-            if (user == null)
+            //  Basic input validation
+            if (string.IsNullOrWhiteSpace(Name) || string.IsNullOrWhiteSpace(Password))
                 return Page();
 
-            // Creating identity cookie
-            //Letting ASP.NET know user has logged in
+            //  Identity handles password verification internally
+            //checking UserName and Password  with AspNetUsers table
+            var result = await _signInManager.PasswordSignInAsync(
+                userName: Name,
+                password: Password,
+                isPersistent: false,
+                lockoutOnFailure: true  // locks after repeated failed attempts (Brute force protection)
+            );
 
-            var claims = new List<Claim>
+            if (result.Succeeded)
             {
-                new Claim(ClaimTypes.Name, user.Name ?? string.Empty)
-            };
-
-            var claimsIdentity = new ClaimsIdentity(
-                claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var user = await _userManager.FindByNameAsync(Name);  //finding user
+                var roles = await _userManager.GetRolesAsync(user!);  //checking their role AspNetUserRoles + AspNetRoles
 
 
-        //sing in-> auth cookie creation
-            await HttpContext.SignInAsync(
-                CookieAuthenticationDefaults.AuthenticationScheme,
-                new ClaimsPrincipal(claimsIdentity));
+                if (roles.Contains("Admin"))
+                    return RedirectToPage("/Admin");   //only admins directed to admin page 
+                else
+                    return RedirectToPage("#");
+            }
 
-            return RedirectToPage("/Admin");
+            // Locked out check
+            if (result.IsLockedOut)
+            {
+                ModelState.AddModelError(string.Empty, "Account locked. Try again later.");
+                return Page();
+            }
+
+            // Wrong credentials
+            ModelState.AddModelError(string.Empty, "Invalid username or password.");
+            return Page();
         }
-        public void OnGet()
-        {
 
-        }
+        public void OnGet() { }
     }
 }
