@@ -1,0 +1,22 @@
+﻿img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    gap: 9rem;
+    max-width: 1000px;
+    max-height: 1000px;
+}

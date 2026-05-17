@@ -34,12 +34,20 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/01project/Internship/Test2/Pages/Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FsZW5kYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/01project/Internship/Test2/Pages/EditStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFN0dWRlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/01project/Internship/Test2/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/01project/Internship/Test2/Pages/FacultyData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFjdWx0eURhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/01project/Internship/Test2/Pages/Home.cshtml]
@@ -54,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/01project/Internship/Test2/Pages/Notice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/01project/Internship/Test2/Pages/Shared/Simple.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFNpbXBsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,8 +74,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/01project/Internship/Test2/Pages/Shared/_ViewerLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WaWV3ZXJMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/01project/Internship/Test2/Pages/StudentData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudERhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/01project/Internship/Test2/Pages/Viewers/Family.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld2Vyc1xGYW1pbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/01project/Internship/Test2/Pages/Viewers/Info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld2Vyc1xJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/01project/Internship/Test2/Pages/Viewers/Viewer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld2Vyc1xWaWV3ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/01project/Internship/Test2/Pages/_ViewImports.cshtml]

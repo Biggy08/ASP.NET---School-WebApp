@@ -1,0 +1,116 @@
+﻿/*For Header*/
+
+h1{
+    font-size: 5rem;
+    text-align: center;
+}
+
+
+
+
+/* Shared image style */
+.gallery-img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    object-fit: cover;
+    display: block;
+}
+
+/* Section 2 - Single hero image */
+.hero-section {
+    padding: 40px 20px;
+}
+
+.hero-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-img {
+    height: 480px;
+}
+
+/* Section 3 - 2x2 grid */
+.grid-section {
+    padding: 40px 20px;
+}
+
+.grid-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+    .grid-wrapper .gallery-img {
+        height: 280px;
+    }
+
+
+/* Make the HTML/body the scroll container */
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Wrapper around all sections */
+.page-wrapper {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    /* Hide scrollbar - Firefox */
+    scrollbar-width: none;
+    /* Hide scrollbar - Chrome/Edge/Safari */
+    -ms-overflow-style: none;
+    padding-top: 10vh;
+}
+
+    .page-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+/* Each section snaps into place */
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+/* Section 1 - Two column layout */
+.intro-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 80px;
+    padding-top: 10px; /* navbar offset */
+}
+
+.intro-welcome {
+    margin-top: -50px;
+    width: 100%;
+    text-align: center; 
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-image {
+    flex: 1;
+}
+
+    .intro-image .gallery-img {
+        height: 420px;
+    }
+
+.gallery-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .gallery-img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+    }

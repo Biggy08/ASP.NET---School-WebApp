@@ -1,0 +1,21 @@
+﻿/* Wrapper around all sections */
+.page-wrapper {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    /* Hide scrollbar - Firefox */
+    scrollbar-width: none;
+    /* Hide scrollbar - Chrome/Edge/Safari */
+    -ms-overflow-style: none;
+    padding-top: 10vh;
+}
+
+    .page-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+/* Each section snaps into place */
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}

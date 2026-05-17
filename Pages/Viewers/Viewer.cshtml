@@ -1,0 +1,53 @@
+﻿@page
+@model Test2.Pages.Viewers.ViewerModel
+@{
+    Layout = "_ViewerLayout";
+}
+
+<head>
+
+    @*Font Awesome Integration*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    @*Other  Styling Files*@
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css//ForViewers.css"/>
+</head>
+
+<body>
+<div class="page-wrapper">
+        @*----------------------------------------------------*@
+        <section class="intro-section">
+            <div class="intro-welcome">
+                <h1>Welcome</h1>
+            </div>
+            <div class="intro-text">
+
+                <p>This place is for info</p>
+            </div>
+            <div class="intro-image">
+                <img src="~/images/intro.jpg" alt="Intro Image" class="gallery-img" />
+            </div>
+        </section>
+
+        @*----------------------------------------------------*@
+        <section class="hero-section">
+            <div class="hero-wrapper">
+                <img src="~/images/hero.jpg" alt="Featured Image" class="gallery-img hero-img" />
+            </div>
+        </section>
+
+        @*----------------------------------------------------*@
+        <section class="grid-section">
+            <div class="grid-wrapper">
+                <img src="~/images/img1.jpg" alt="Gallery Image 1" class="gallery-img" />
+                <img src="~/images/img2.jpg" alt="Gallery Image 2" class="gallery-img" />
+                <img src="~/images/img3.jpg" alt="Gallery Image 3" class="gallery-img" />
+                <img src="~/images/img4.jpg" alt="Gallery Image 4" class="gallery-img" />
+            </div>
+        </section>
+
+        @*----------------------------------------------------*@
+
+</div>
+</body>

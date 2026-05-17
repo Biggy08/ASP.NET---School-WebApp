@@ -1,8 +1,53 @@
 ﻿@page
-@model PrivacyModel
+@model InfoModel
 @{
-    ViewData["Title"] = "User Info";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>You have accessed as an admin</p>
+<head>
+    <link rel="stylesheet" href="~/css/simple.css" />
+    <link rel="stylesheet" href="~/css/Section.css" />
+
+</head>
+
+<style>
+    h1{
+        font-size: 6rem;
+        margin-top: -50px;
+    }
+
+    left-side{
+        
+    }    
+
+</style>
+
+
+<body>
+@*Motehr Div*@
+<div class="page-wrapper" style="margin-left: 12rem">
+    <div class="left-side">
+        <h1 >Info</h1>
+            <p>You have accessed as an admin</p>
+    </div>
+
+    @*Update Info *@
+        <div>
+            @if (Model.CurrentInfo != null)
+                {
+                    <p>@Model.CurrentInfo.Text</p>                
+                }
+                else
+                {
+                    <p>No info stored yet.</p>
+                }   
+
+            <form method="post">
+                <textarea name="NewText" rows="4" cols="50">@Model.CurrentInfo?.Text</textarea>
+                <br />
+                <button type="submit">Update Info</button>
+            </form>
+        </div>
+    
+</div>
+</body>
+

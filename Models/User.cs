@@ -1,10 +1,9 @@
-﻿namespace Test2.Models
-{
-    public class User
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
+﻿using Microsoft.AspNetCore.Identity;
 
-        public string? Password { get; set; }
+namespace Test2.Models
+{
+    public class User : IdentityUser
+    {
+     
     }
 }
