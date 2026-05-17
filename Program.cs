@@ -14,11 +14,10 @@ builder.Services.AddRazorPages(options =>
     options.Conventions.AuthorizeFolder("/"); //lock all
 
     options.Conventions.AllowAnonymousToFolder("/Viewers"); //for viewers without credentials
-    
+
     options.Conventions.AllowAnonymousToPage("/Index");  //exception for login page too
-    
 
-
+}
     );
 
 
